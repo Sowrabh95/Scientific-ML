@@ -337,4 +337,4 @@ under-fitting is observed due to bias in the model. Further fine-tuning of the m
 the learning rate value and increasing the iteration size.
 
 
-Dandekar, Raj, et al. “A Machine Learning-Aided Global Diagnostic and Comparative Tool to Assess Effect of Quarantine Control in COVID-19 Spread.” Patterns, vol. 1, no. 9, Dec. 2020, p. 100145, https://doi.org/10.1016/j.patter.2020.100145. Accessed 3 Feb. 2021.
+Dandekar, Raj, et al. “A Machine Learning-Aided Global Diagnostic and Comparative Tool to Assess Effect of Quarantine Control in COVID-19 Spread.” Patterns, vol. 1, no. 9, Dec. 2020, p. 100145, https://doi.org/10.1016/j.patter.2020.100145.
