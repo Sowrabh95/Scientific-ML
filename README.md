@@ -1,6 +1,8 @@
 # Scientific-ML
 SIR MODEL USING NEURAL ODEs in JULIA
+
 Problem Background
+
 The SIR (Susceptible-Infected-Recovered) model is a classical epidemio-logical model that simulates how a contagious disease spreads through a population in the region. It consists of three ordinary differential equations (ODEs) describing the rates of change of the susceptible/ not infected S(t), infected I(t), and recovered R(t) populations over time (days).
 
 The dynamics are governed by:
