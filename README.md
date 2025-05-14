@@ -22,7 +22,9 @@ Where:
 •γ (gamma) is the recovery rate, calculated as: γ=1/D = 1/10 where D is the average duration of infection
 
 ![image](https://github.com/user-attachments/assets/244e0d8a-4548-4375-8103-89dd8a11fb26)
+
 Image credits: 3Blue1Brown
+
 In this scenario, we use both a traditional ODE which is formula based and a Neural ODE to model the SIR system, then compare the results.
 
 1) Generate Synthetic Data
