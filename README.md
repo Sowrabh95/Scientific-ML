@@ -26,6 +26,11 @@ In this scenario, we use both a traditional ODE which is formula based and a Neu
 1) Generate Synthetic Data
 a. Load necessary packages
 
+#LOAD THE PACKAGES
+
+using ComponentArrays, Lux, DiffEqFlux, OrdinaryDiffEq, Optimization,
+OptimizationOptimisers, OptimizationOptimJL, Random, Plots
+
 • ComponentArrays: For handling and optimizing neural network parameters cleanly.
 
 •Lux: A lightweight and fast neural network library in Julia.
@@ -299,7 +304,9 @@ callback((; u=res2.u), loss_neuralode(res2.u); doplot=true)
 
 •	BFGS can help find a more precise local minimum after Adam's rough optimization.
 
-Optimization loop adjusts NN parameters to match the neural model output with the true SIR data. ADAM and BFGS performs two-stage optimization strategy for stable convergence. BFGS is used to fine-tune the NN.
+Optimization loop adjusts NN parameters to match the neural model output with the true SIR data. 
+
+ADAM and BFGS performs two-stage optimization strategy for stable convergence. BFGS is used to fine-tune the NN.
 
 d) Compare Neural ODE Predictions to True Data
 
@@ -318,3 +325,14 @@ df_pred = DataFrame(S=predict_neuralode(res2.u)[1, :], I=predict_neuralode(res2.
 CSV.write("predicted_data.csv", df_pred)
 
 Visual plots help confirm how well the model learned the dynamics.
+
+![image](https://github.com/user-attachments/assets/1f698327-f72a-42ff-9fe0-5de1d753a843)
+
+It can be observed that the model is predicting the Susceptibility values and Recover values well however there are slight differences with respect to the infected values I(t) for a range of 0-50 days. A slight
+
+under-fitting is observed due to bias in the model. Further fine-tuning of the model may be necessary to address this issue. A probable solution is to iterate over the Optimization.solve arguments by adjusting 
+
+the learning rate value and increasing the iteration size.
+
+
+Dandekar, Raj, et al. “A Machine Learning-Aided Global Diagnostic and Comparative Tool to Assess Effect of Quarantine Control in COVID-19 Spread.” Patterns, vol. 1, no. 9, Dec. 2020, p. 100145, https://doi.org/10.1016/j.patter.2020.100145. Accessed 3 Feb. 2021.
