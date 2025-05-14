@@ -333,9 +333,7 @@ Visual plots help confirm how well the model learned the dynamics.
 ![image](https://github.com/user-attachments/assets/1f698327-f72a-42ff-9fe0-5de1d753a843)
 
 It can be observed that the model is predicting the Susceptibility values and Recover values well however there are slight differences with respect to the infected values I(t) for a range of 0-50 days. A slight
-
 under-fitting is observed due to bias in the model. Further fine-tuning of the model may be necessary to address this issue. A probable solution is to iterate over the Optimization.solve arguments by adjusting 
-
 the learning rate value and increasing the iteration size.
 
 
