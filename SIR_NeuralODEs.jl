@@ -1,4 +1,4 @@
-print("Good")
+
 using ComponentArrays, Lux, DiffEqFlux, OrdinaryDiffEq, Optimization, OptimizationOptimJL,
       OptimizationOptimisers, Random, Plots
 
